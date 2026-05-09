@@ -21,29 +21,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-type Variety = {
-  name: string;
-  origin?: string;
-  image: string;
-  description: string;
-};
-
-const varieties: Variety[] = [
-  {
-    name: "Tohoku",
-    origin: "Japanilainen Fuji 2 -lajike",
-    image: tohoku,
-    description:
-      "Mehevä, rapea ja runsaan makuinen syys-talviomena. Tarkempi lajikekuvaus tulossa.",
-  },
-  {
-    name: "Gloster",
-    origin: "Aromikas talviomena",
-    image: gloster,
-    description:
-      "Gloster on aromikas ja hapokas talviomena. Jotta tummanpunainen peiteväri saadaan esiin, tarvitaan muutama kylmä yö. Hedelmäliha on rapsakka, mehukas ja vaaleankeltainen. Erinomainen sellaisenaan, mutta sopii hyvin myös leivontaan, jälkiruokiin ja torttuihin.",
-  },
-];
 
 function Index() {
   return (
