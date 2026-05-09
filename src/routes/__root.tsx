@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Papinsaaren Tarha" },
+      { name: "description", content: "Omena ja hedelmätarha Kuhmoisissa" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Papinsaaren Tarha" },
+      { property: "og:description", content: "Omena ja hedelmätarha Kuhmoisissa" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Papinsaaren Tarha" },
+      { name: "twitter:description", content: "Omena ja hedelmätarha Kuhmoisissa" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1b20d6cc-9d8a-4332-b47d-7b1c625d30df/id-preview-12545c64--3f211f8f-7fa7-42b9-8900-1f62b27f660a.lovable.app-1778332778238.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1b20d6cc-9d8a-4332-b47d-7b1c625d30df/id-preview-12545c64--3f211f8f-7fa7-42b9-8900-1f62b27f660a.lovable.app-1778332778238.png" },
     ],
     links: [
       {
