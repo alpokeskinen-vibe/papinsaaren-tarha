@@ -1,7 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import banner from "@/assets/orchard-banner.jpg";
-import tohoku from "@/assets/tohoku.png";
-import gloster from "@/assets/gloster.png";
+import { featuredVarieties } from "@/lib/varieties";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,29 +21,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-type Variety = {
-  name: string;
-  origin?: string;
-  image: string;
-  description: string;
-};
-
-const varieties: Variety[] = [
-  {
-    name: "Tohoku",
-    origin: "Japanilainen Fuji 2 -lajike",
-    image: tohoku,
-    description:
-      "Mehevä, rapea ja runsaan makuinen syys-talviomena. Tarkempi lajikekuvaus tulossa.",
-  },
-  {
-    name: "Gloster",
-    origin: "Aromikas talviomena",
-    image: gloster,
-    description:
-      "Gloster on aromikas ja hapokas talviomena. Jotta tummanpunainen peiteväri saadaan esiin, tarvitaan muutama kylmä yö. Hedelmäliha on rapsakka, mehukas ja vaaleankeltainen. Erinomainen sellaisenaan, mutta sopii hyvin myös leivontaan, jälkiruokiin ja torttuihin.",
-  },
-];
 
 function Index() {
   return (
@@ -116,7 +92,7 @@ function Index() {
           </div>
 
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {varieties.map((v) => (
+            {featuredVarieties.map((v) => (
               <article
                 key={v.name}
                 className="group rounded-2xl bg-background/70 p-6 shadow-sm ring-1 ring-border/50 transition hover:-translate-y-1 hover:shadow-xl"
@@ -141,17 +117,17 @@ function Index() {
                 </p>
               </article>
             ))}
-
-            {Array.from({ length: 1 }).map((_, i) => (
-              <article
-                key={`placeholder-${i}`}
-                className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border/60 bg-background/30 p-10 text-center text-muted-foreground"
-              >
-                <span className="font-display text-lg">Lisää lajikkeita</span>
-                <span className="mt-2 text-xs">Tulossa pian</span>
-              </article>
-            ))}
           </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              to="/kaikki"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 px-6 py-3 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
+            >
+              Selaa kaikkia lajikkeita →
+            </Link>
+          </div>
+
         </div>
       </section>
 

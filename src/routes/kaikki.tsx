@@ -1,0 +1,224 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useMemo, useState } from "react";
+import {
+  varieties,
+  fruitLabels,
+  seasonLabels,
+  type FruitType,
+  type AppleSeason,
+} from "@/lib/varieties";
+
+export const Route = createFileRoute("/kaikki")({
+  head: () => ({
+    meta: [
+      { title: "Kaikki lajikkeet — Papinsaaren Tarha" },
+      {
+        name: "description",
+        content:
+          "Papinsaaren Tarhan koko lajikevalikoima: omenat, päärynät ja kirsikat. Suodata hedelmätyypin ja kauden mukaan.",
+      },
+      { name: "robots", content: "noindex" },
+    ],
+  }),
+  component: AllVarieties,
+});
+
+type FruitFilter = "kaikki" | FruitType;
+type SeasonFilter = "kaikki" | AppleSeason;
+type SortMode = "aakkoset" | "kypsymis";
+
+function AllVarieties() {
+  const [fruit, setFruit] = useState<FruitFilter>("kaikki");
+  const [season, setSeason] = useState<SeasonFilter>("kaikki");
+  const [sort, setSort] = useState<SortMode>("aakkoset");
+
+  const list = useMemo(() => {
+    let l = varieties.slice();
+    if (fruit !== "kaikki") l = l.filter((v) => v.fruit === fruit);
+    if (fruit === "omena" && season !== "kaikki") {
+      l = l.filter((v) => v.season === season);
+    }
+    if (sort === "aakkoset") {
+      l.sort((a, b) => a.name.localeCompare(b.name, "fi"));
+    } else {
+      // Kypsymisjärjestys: omenat ensin (ripenOrder), muut hedelmät loppuun
+      l.sort((a, b) => {
+        const aApple = a.fruit === "omena" ? 0 : 1;
+        const bApple = b.fruit === "omena" ? 0 : 1;
+        if (aApple !== bApple) return aApple - bApple;
+        const ar = a.ripenOrder ?? 9999;
+        const br = b.ripenOrder ?? 9999;
+        if (ar !== br) return ar - br;
+        return a.name.localeCompare(b.name, "fi");
+      });
+    }
+    return l;
+  }, [fruit, season, sort]);
+
+  const fruitOptions: { value: FruitFilter; label: string }[] = [
+    { value: "kaikki", label: "Kaikki hedelmät" },
+    { value: "omena", label: fruitLabels.omena },
+    { value: "päärynä", label: fruitLabels.päärynä },
+    { value: "kirsikka", label: fruitLabels.kirsikka },
+  ];
+
+  const seasonOptions: { value: SeasonFilter; label: string }[] = [
+    { value: "kaikki", label: "Kaikki kaudet" },
+    { value: "kesä", label: seasonLabels.kesä },
+    { value: "syys", label: seasonLabels.syys },
+    { value: "talvi", label: seasonLabels.talvi },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="border-b border-border/60">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <Link to="/" className="block">
+            <p className="font-display text-xl font-semibold text-primary">
+              Papinsaaren Tarha
+            </p>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              Kuhmoinen
+            </p>
+          </Link>
+          <Link to="/" className="text-sm text-muted-foreground hover:text-primary">
+            ← Etusivulle
+          </Link>
+        </div>
+      </header>
+
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <h1 className="font-display text-4xl font-semibold md:text-5xl">
+          Kaikki lajikkeet
+        </h1>
+        <p className="mt-3 max-w-2xl text-muted-foreground">
+          Tarhan koko valikoima. Suodata hedelmätyypin ja kauden mukaan tai
+          järjestä kypsymisjärjestyksessä.
+        </p>
+
+        <div className="mt-10 flex flex-wrap items-end gap-6 rounded-2xl border border-border/60 bg-orchard-soft/40 p-6">
+          <FilterGroup label="Hedelmä">
+            {fruitOptions.map((o) => (
+              <Chip
+                key={o.value}
+                active={fruit === o.value}
+                onClick={() => {
+                  setFruit(o.value);
+                  if (o.value !== "omena") setSeason("kaikki");
+                }}
+              >
+                {o.label}
+              </Chip>
+            ))}
+          </FilterGroup>
+
+          {fruit === "omena" && (
+            <FilterGroup label="Kausi">
+              {seasonOptions.map((o) => (
+                <Chip
+                  key={o.value}
+                  active={season === o.value}
+                  onClick={() => setSeason(o.value)}
+                >
+                  {o.label}
+                </Chip>
+              ))}
+            </FilterGroup>
+          )}
+
+          <FilterGroup label="Järjestys">
+            <Chip active={sort === "aakkoset"} onClick={() => setSort("aakkoset")}>
+              Aakkosjärjestys
+            </Chip>
+            <Chip active={sort === "kypsymis"} onClick={() => setSort("kypsymis")}>
+              Kypsymisjärjestys
+            </Chip>
+          </FilterGroup>
+        </div>
+
+        {list.length === 0 ? (
+          <p className="mt-16 text-center text-muted-foreground">
+            Valituilla suodattimilla ei löytynyt lajikkeita.
+          </p>
+        ) : (
+          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {list.map((v) => (
+              <article
+                key={v.name}
+                className="group rounded-2xl bg-background/70 p-6 shadow-sm ring-1 ring-border/50 transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="flex h-56 items-center justify-center">
+                  <img
+                    src={v.image}
+                    alt={v.name}
+                    className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="mt-6 flex items-center justify-between gap-3">
+                  <h3 className="text-2xl font-semibold text-primary">
+                    {v.name}
+                  </h3>
+                  <span className="rounded-full bg-orchard-soft px-3 py-1 text-[10px] uppercase tracking-wider text-orchard">
+                    {v.fruit === "omena" && v.season
+                      ? seasonLabels[v.season]
+                      : fruitLabels[v.fruit]}
+                  </span>
+                </div>
+                {v.origin && (
+                  <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
+                    {v.origin}
+                  </p>
+                )}
+                <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+                  {v.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+    </div>
+  );
+}
+
+function FilterGroup({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-col gap-2">
+      <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+        {label}
+      </span>
+      <div className="flex flex-wrap gap-2">{children}</div>
+    </div>
+  );
+}
+
+function Chip({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={
+        "rounded-full border px-4 py-1.5 text-sm transition " +
+        (active
+          ? "border-primary bg-primary text-primary-foreground"
+          : "border-border bg-background text-foreground hover:border-primary/50")
+      }
+    >
+      {children}
+    </button>
+  );
+}
