@@ -1,7 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import banner from "@/assets/orchard-banner.jpg";
-import tohoku from "@/assets/tohoku.png";
-import gloster from "@/assets/gloster.png";
+import { featuredVarieties } from "@/lib/varieties";
 
 export const Route = createFileRoute("/")({
   head: () => ({
