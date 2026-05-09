@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import banner from "@/assets/orchard-banner.jpg";
 import tohoku from "@/assets/tohoku.png";
+import gloster from "@/assets/gloster.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,6 +36,13 @@ const varieties: Variety[] = [
     image: tohoku,
     description:
       "Mehevä, rapea ja runsaan makuinen syys-talviomena. Tarkempi lajikekuvaus tulossa.",
+  },
+  {
+    name: "Gloster",
+    origin: "Aromikas talviomena",
+    image: gloster,
+    description:
+      "Gloster on aromikas ja hapokas talviomena. Jotta tummanpunainen peiteväri saadaan esiin, tarvitaan muutama kylmä yö. Hedelmäliha on rapsakka, mehukas ja vaaleankeltainen. Erinomainen sellaisenaan, mutta sopii hyvin myös leivontaan, jälkiruokiin ja torttuihin.",
   },
 ];
 
@@ -134,7 +142,7 @@ function Index() {
               </article>
             ))}
 
-            {Array.from({ length: 2 }).map((_, i) => (
+            {Array.from({ length: 1 }).map((_, i) => (
               <article
                 key={`placeholder-${i}`}
                 className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border/60 bg-background/30 p-10 text-center text-muted-foreground"
