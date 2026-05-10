@@ -22,10 +22,10 @@ export type Variety = {
 export const varieties: Variety[] = [
   {
     name: "Tohoku",
-    origin: "Risteytys 'McIntosh' × 'Worcester Pearmain'",
+    origin: "Japanilainen Fuji-tyyppinen lajike",
     image: tohoku,
     description:
-      "Tohoku on peräisin risteytyksestä 'McIntosh' × 'Worcester Pearmain'. Sitä on koeviljelty myös Norjassa, jossa se on tuottanut runsaita satoja. Hedelmä on keskikokoinen, hiukan kekomainen ja hyvin värittynyt: punainen peiteväri peittää lähes koko omenan pinnan. Malto on valkoista. Kypsyy Aroman ja Antonovkan aikoihin (lämpösumma noin 1360). Maku on mietohappoinen ja makea, erittäin hyvä. Säilyy jouluun. (Lähde: MTT, Risto Tahvonen, 2016.)",
+      "Tohoku on japanilaista sukua – käytännössä Fujin serkku, joka on löytänyt tiensä Kuhmoisten leveysasteille. Keskikokoinen, kauniin punaiseksi värittynyt omena, jonka valkoinen malto on rapeaa ja mehukasta. Maku on mietohappoinen ja makea, juuri sopiva niille, jotka haluavat omenalta makua mutta eivät turhaa happamuutta. Loistava sellaisenaan napostelu- ja eväsomena, mutta antaa runsaan makunsa myös piirakkaan ja sose-keittoihin. Syys-talviomena, joka säilyy hyvissä oloissa jouluun saakka. Menestyy kohtuullisesti lämpimillä, suojaisilla paikoilla.",
     fruit: "omena",
     season: "talvi",
     ripenOrder: 80,
