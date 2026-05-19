@@ -3,6 +3,7 @@ import gloster from "@/assets/gloster.png";
 import olga from "@/assets/olga.png";
 import aelita from "@/assets/aelita.png";
 import agra from "@/assets/agra.png";
+import astrakaaniPunainen from "@/assets/astrakaani-punainen.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -61,6 +62,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 50,
+  },
+  {
+    name: "Astrakaani punainen",
+    origin: "Ruotsalainen vanha kesälajike",
+    image: astrakaaniPunainen,
+    description:
+      "Astrakaani punainen on ruotsalainen klassikko, joka pukeutuu reilusti punaiseen peiteväriin – kaunis jo pelkästään puussa. Malto on vaaleaa, tiivistä ja mehukasta, ja maku on aromaattinen ja viinihappoinen; tarkkaavainen maistaja löytää mehusta vielä lievän tanniinisen vivahteen, ihan kuin pieni kesäviini olisi pullotettu omenan sisään. Toimii sellaisenaan, mehuksi ja kotitalouden moniin käyttöihin. Kesälajike, joka kypsyy elokuun puolivälissä ja säilyy parisen viikkoa – siis nautittavaksi heti, ei talven varastoon. Meillä menestynyt hyvin suotuisalla paikalla.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 32,
   },
   {
     name: "Agra",
