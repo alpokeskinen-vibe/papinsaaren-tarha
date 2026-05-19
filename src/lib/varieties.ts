@@ -2,6 +2,7 @@ import tohoku from "@/assets/tohoku.png";
 import gloster from "@/assets/gloster.png";
 import olga from "@/assets/olga.png";
 import aelita from "@/assets/aelita.png";
+import agra from "@/assets/agra.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -60,6 +61,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 50,
+  },
+  {
+    name: "Agra",
+    origin: "Latvia: Suislepp × Tallinnan päärynäomena",
+    image: agra,
+    description:
+      "Agra on latvialainen kesäomena, jonka sukutaulussa on klassikkojen Suislepin ja Tallinnan päärynäomenan ainekset – ja se kyllä maistuu. Kuori peittyy reilusti kirkkaanpunaiseen, ja malto on kellertävää ja keskinkertaisen mehukasta. Maku on hieno ja tasapainoinen: miellyttävän mausteinen, happaman-imelä – juuri sellainen, joka tekee kesäomenasta enemmän kuin pelkän napostelun. Sopii hyvin sellaisenaan, mehuksi ja kotitalouden moniin käyttöihin. Kypsyy elokuun puolivälin tienoilla ja säilyy noin kuukauden, joten kannattaa nauttia tuoreeltaan.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 30,
   },
 ];
 
