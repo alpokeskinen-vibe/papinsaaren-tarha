@@ -51,6 +51,16 @@ export const varieties: Variety[] = [
     fruit: "päärynä",
     ripenOrder: 200,
   },
+  {
+    name: "Aelita",
+    origin: "Wealthy × Koritshnoje polosatoje (Kaneliomena), jalostettu Moskovassa ja Mitshurinskissa",
+    image: aelita,
+    description:
+      "Aelita on venäläistä juurta oleva syyslajike, jossa virtaa sekä amerikkalaisen Wealthyn että vanhan Kaneliomenan verta – aika juhlava sukutaulu pieneen omenaan. Kuori on vihertävänkeltainen ja peittyy punaiseen, joka maalautuu joko reiluiksi läiskiksi tai hennoiksi viiruiksi. Malto on kellertävää, mehevää, hienorakeista ja sopivan napakkaa. Maku on hieno ja tasapainoinen, happaman-imelä – juuri sellainen, joka toimii sekä napostelussa että kotitalouden monissa käytöissä piirakasta soseeseen. Hedelmät kypsyvät syyskuun keskivaiheilla ja säilyvät noin kaksi kuukautta.",
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 50,
+  },
 ];
 
 export const featuredVarieties = varieties.filter((v) => v.featured);
