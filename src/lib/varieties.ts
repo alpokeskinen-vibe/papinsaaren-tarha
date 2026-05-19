@@ -4,6 +4,7 @@ import olga from "@/assets/olga.png";
 import aelita from "@/assets/aelita.png";
 import agra from "@/assets/agra.png";
 import astrakaaniPunainen from "@/assets/astrakaani-punainen.png";
+import genevaEarly from "@/assets/geneva-early.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -82,6 +83,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 30,
+  },
+  {
+    name: "Geneva Early",
+    origin: "USA: Quinte × Julyred",
+    image: genevaEarly,
+    description:
+      "Geneva Early on amerikkalainen kesäomena, jonka vanhemmissa komeilevat Quinte ja Julyred – sukutaulun perusteella siis selkeästi kesäkauden iloksi jalostettu. Kuori on punainen keltaisella pohjalla, ja malto on pehmeää ja kermanväristä. Maku on aromikas, aavistuksen hapan ja kirpeä – juuri sellainen virkistävä puraisu, jota kuumana elokuun päivänä kaipaa. Hyvä syötäväksi sellaisenaan, mutta sopii myös salaatteihin ja jälkiruokiin tuomaan raikasta särmää. Kypsyy elokuun alussa ja säilyy parisen viikkoa. Meillä kokeiltu lämpimässä paikassa.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 20,
   },
 ];
 
