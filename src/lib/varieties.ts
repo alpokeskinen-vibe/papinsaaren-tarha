@@ -1,6 +1,7 @@
 import tohoku from "@/assets/tohoku.png";
 import gloster from "@/assets/gloster.png";
 import olga from "@/assets/olga.png";
+import aelita from "@/assets/aelita.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
