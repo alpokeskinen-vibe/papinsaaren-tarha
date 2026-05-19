@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as KaikkiRouteImport } from './routes/kaikki'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as KaikkiNameRouteImport } from './routes/kaikki.$name'
 
 const KaikkiRoute = KaikkiRouteImport.update({
   id: '/kaikki',
@@ -22,31 +23,39 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KaikkiNameRoute = KaikkiNameRouteImport.update({
+  id: '/$name',
+  path: '/$name',
+  getParentRoute: () => KaikkiRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/kaikki': typeof KaikkiRoute
+  '/kaikki': typeof KaikkiRouteWithChildren
+  '/kaikki/$name': typeof KaikkiNameRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/kaikki': typeof KaikkiRoute
+  '/kaikki': typeof KaikkiRouteWithChildren
+  '/kaikki/$name': typeof KaikkiNameRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/kaikki': typeof KaikkiRoute
+  '/kaikki': typeof KaikkiRouteWithChildren
+  '/kaikki/$name': typeof KaikkiNameRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kaikki'
+  fullPaths: '/' | '/kaikki' | '/kaikki/$name'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kaikki'
-  id: '__root__' | '/' | '/kaikki'
+  to: '/' | '/kaikki' | '/kaikki/$name'
+  id: '__root__' | '/' | '/kaikki' | '/kaikki/$name'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  KaikkiRoute: typeof KaikkiRoute
+  KaikkiRoute: typeof KaikkiRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -65,13 +74,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kaikki/$name': {
+      id: '/kaikki/$name'
+      path: '/$name'
+      fullPath: '/kaikki/$name'
+      preLoaderRoute: typeof KaikkiNameRouteImport
+      parentRoute: typeof KaikkiRoute
+    }
   }
 }
 
+interface KaikkiRouteChildren {
+  KaikkiNameRoute: typeof KaikkiNameRoute
+}
+
+const KaikkiRouteChildren: KaikkiRouteChildren = {
+  KaikkiNameRoute: KaikkiNameRoute,
+}
+
+const KaikkiRouteWithChildren =
+  KaikkiRoute._addFileChildren(KaikkiRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  KaikkiRoute: KaikkiRoute,
+  KaikkiRoute: KaikkiRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
