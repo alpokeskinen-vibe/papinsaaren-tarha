@@ -3,6 +3,7 @@ import gloster from "@/assets/gloster.png";
 import olga from "@/assets/olga.png";
 import aelita from "@/assets/aelita.png";
 import agra from "@/assets/agra.png";
+import astrakaaniPunainen from "@/assets/astrakaani-punainen.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
