@@ -72,6 +72,7 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 32,
+  },
   {
     name: "Agra",
     origin: "Latvia: Suislepp × Tallinnan päärynäomena",
