@@ -7,6 +7,7 @@ import {
   type FruitType,
   type AppleSeason,
 } from "@/lib/varieties";
+import { VarietyCard } from "@/components/VarietyCard";
 
 export const Route = createFileRoute("/kaikki")({
   head: () => ({
@@ -143,38 +144,7 @@ function AllVarieties() {
         ) : (
           <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {list.map((v) => (
-              <Link
-                key={v.name}
-                to="/kaikki/$name"
-                params={{ name: encodeURIComponent(v.name) }}
-                className="group block rounded-2xl bg-background/70 p-6 shadow-sm ring-1 ring-border/50 transition hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="flex h-56 items-center justify-center">
-                  <img
-                    src={v.image}
-                    alt={v.name}
-                    className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="mt-6 flex items-center justify-between gap-3">
-                  <h3 className="text-2xl font-semibold text-primary">
-                    {v.name}
-                  </h3>
-                  <span className="rounded-full bg-orchard-soft px-3 py-1 text-[10px] uppercase tracking-wider text-orchard">
-                    {v.fruit === "omena" && v.season
-                      ? seasonLabels[v.season]
-                      : fruitLabels[v.fruit]}
-                  </span>
-                </div>
-                {v.origin && (
-                  <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
-                    {v.origin}
-                  </p>
-                )}
-                <p className="mt-3 text-sm leading-relaxed text-foreground/80 line-clamp-4">
-                  {v.description}
-                </p>
-              </Link>
+              <VarietyCard key={v.name} variety={v} />
             ))}
           </div>
         )}

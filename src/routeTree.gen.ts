@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as KaikkiRouteImport } from './routes/kaikki'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as KaikkiNameRouteImport } from './routes/kaikki.$name'
 
 const KaikkiRoute = KaikkiRouteImport.update({
   id: '/kaikki',
@@ -23,39 +22,31 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KaikkiNameRoute = KaikkiNameRouteImport.update({
-  id: '/$name',
-  path: '/$name',
-  getParentRoute: () => KaikkiRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/kaikki': typeof KaikkiRouteWithChildren
-  '/kaikki/$name': typeof KaikkiNameRoute
+  '/kaikki': typeof KaikkiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/kaikki': typeof KaikkiRouteWithChildren
-  '/kaikki/$name': typeof KaikkiNameRoute
+  '/kaikki': typeof KaikkiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/kaikki': typeof KaikkiRouteWithChildren
-  '/kaikki/$name': typeof KaikkiNameRoute
+  '/kaikki': typeof KaikkiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kaikki' | '/kaikki/$name'
+  fullPaths: '/' | '/kaikki'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kaikki' | '/kaikki/$name'
-  id: '__root__' | '/' | '/kaikki' | '/kaikki/$name'
+  to: '/' | '/kaikki'
+  id: '__root__' | '/' | '/kaikki'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  KaikkiRoute: typeof KaikkiRouteWithChildren
+  KaikkiRoute: typeof KaikkiRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -74,30 +65,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/kaikki/$name': {
-      id: '/kaikki/$name'
-      path: '/$name'
-      fullPath: '/kaikki/$name'
-      preLoaderRoute: typeof KaikkiNameRouteImport
-      parentRoute: typeof KaikkiRoute
-    }
   }
 }
 
-interface KaikkiRouteChildren {
-  KaikkiNameRoute: typeof KaikkiNameRoute
-}
-
-const KaikkiRouteChildren: KaikkiRouteChildren = {
-  KaikkiNameRoute: KaikkiNameRoute,
-}
-
-const KaikkiRouteWithChildren =
-  KaikkiRoute._addFileChildren(KaikkiRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  KaikkiRoute: KaikkiRouteWithChildren,
+  KaikkiRoute: KaikkiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
