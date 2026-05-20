@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import banner from "@/assets/orchard-banner.jpg";
 import { featuredVarieties } from "@/lib/varieties";
+import { VarietyCard } from "@/components/VarietyCard";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -86,36 +87,13 @@ function Index() {
               Omenoita joka makuun
             </h2>
             <p className="hidden max-w-sm text-sm text-muted-foreground md:block">
-              Lajikevalikoima täydentyy kauden mukaan. Klikkaa lajiketta
-              lukeaksesi lisää.
+              Lajikevalikoima täydentyy kauden mukaan. Avaa nuolella lisätietoja.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {featuredVarieties.map((v) => (
-              <article
-                key={v.name}
-                className="group rounded-2xl bg-background/70 p-6 shadow-sm ring-1 ring-border/50 transition hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="flex h-56 items-center justify-center">
-                  <img
-                    src={v.image}
-                    alt={v.name}
-                    className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="mt-6 text-2xl font-semibold text-primary">
-                  {v.name}
-                </h3>
-                {v.origin && (
-                  <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
-                    {v.origin}
-                  </p>
-                )}
-                <p className="mt-3 text-sm leading-relaxed text-foreground/80">
-                  {v.description}
-                </p>
-              </article>
+              <VarietyCard key={v.name} variety={v} />
             ))}
           </div>
 
