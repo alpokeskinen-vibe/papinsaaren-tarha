@@ -87,8 +87,7 @@ function Index() {
               Omenoita joka makuun
             </h2>
             <p className="hidden max-w-sm text-sm text-muted-foreground md:block">
-              Lajikevalikoima täydentyy kauden mukaan. Klikkaa lajiketta
-              lukeaksesi lisää.
+              Lajikevalikoima täydentyy kauden mukaan. Avaa nuolella lisätietoja.
             </p>
           </div>
 
