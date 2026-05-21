@@ -7,6 +7,7 @@ import astrakaaniPunainen from "@/assets/astrakaani-punainen.png";
 import genevaEarly from "@/assets/geneva-early.png";
 import huvitus from "@/assets/huvitus.png";
 import ijulskojeTshernenko from "@/assets/ijulskoje-tshernenko.png";
+import jaspi from "@/assets/jaspi.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -115,6 +116,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 22,
+  },
+  {
+    name: "Jaspi",
+    origin: "Suomalainen, Piikiön jaloste: Lobo × Huvitus",
+    image: jaspi,
+    description:
+      "Jaspi on suomalainen Piikiön jaloste, jonka vanhemmissa yhdistyvät kanadalainen Lobo ja kotimainen klassikko Huvitus – ja se kyllä näkyy ja maistuu. Kuori on vahapeitteinen ja kiiltävä, ja peiteväri on hehkuvan punainen, melkein kuin omena olisi juuri kiillotettu. Malto on valkoista, tiivistä ja rapeaa – rouskuu mukavasti hampaiden alla. Maku on mausteinen ja makea, miedosti hapokas; tasapainoinen ja monipuolinen, joten Jaspi taipuu sekä napostelusta että kotitalouden moniin käyttöihin piirakasta soseeseen. Syyslajike, joka kypsyy syyskuun puolivälin jälkeen ja säilyy ainakin kuukauden, hyvissä oloissa jopa marraskuuhun saakka.",
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 55,
   },
 ];
 
