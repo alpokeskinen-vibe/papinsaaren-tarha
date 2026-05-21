@@ -8,6 +8,7 @@ import genevaEarly from "@/assets/geneva-early.png";
 import huvitus from "@/assets/huvitus.png";
 import ijulskojeTshernenko from "@/assets/ijulskoje-tshernenko.png";
 import jaspi from "@/assets/jaspi.png";
+import jelena from "@/assets/jelena.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -126,6 +127,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 55,
+  },
+  {
+    name: "Jelena",
+    origin: "Valko-Venäjä: Ranneje sladkoje × Discovery",
+    image: jelena,
+    description:
+      "Jelena on valko-venäläistä jalostusta, jonka vanhemmissa kohtaavat varhainen Ranneje sladkoje ja englantilainen Discovery – yhdistelmä, joka tuo sekä väriä että aromia. Peiteväri on kirkkaan ruusunpunaista ja sitä on melko runsaasti. Malto on väriltään hieman vihertävää, melko tiivistä, hienorakeista ja mehukasta. Maku on lievähappoista, miellyttävää ja mausteisen makeaa – juuri sellainen tasapainoinen kesäomena, johon on helppo ihastua. Sopii sellaisenaan ja kotitalouden moniin käyttöihin. Hedelmät kypsyvät elokuun alkupuolella ja säilyvät jopa kuukauden, joskin tuoremyyntiin kelpaa vain pieni osa – paras siis nauttia tuoreeltaan tai jalostaa heti.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 24,
   },
 ];
 
