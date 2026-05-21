@@ -5,6 +5,7 @@ import aelita from "@/assets/aelita.png";
 import agra from "@/assets/agra.png";
 import astrakaaniPunainen from "@/assets/astrakaani-punainen.png";
 import genevaEarly from "@/assets/geneva-early.png";
+import huvitus from "@/assets/huvitus.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -93,6 +94,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 20,
+  },
+  {
+    name: "Huvitus",
+    origin: "Suomalainen, Huvituksen kartanosta vuodelta 1895",
+    image: huvitus,
+    description:
+      "Huvitus on aito suomalainen klassikko, joka on saanut alkunsa Huvituksen kartanosta jo vuonna 1895 – kotimaista omenahistoriaa parhaimmillaan. Pohjaväri on keltainen ja sen päälle maalautuu runsaasti kaunista, helakanpunaista peiteväriä. Malto on kiinteää ja käsittelyä kestävää, joten omena ei murskaannu korissa eikä kassissa. Maku on miellyttävän imelän hapokas – juuri sellainen tasapainoinen kesäomenan maku, johon on helppo ihastua. Kesäomena, joka kypsyy elokuun puolivälistä alkaen mutta jauhottuu pian, joten kannattaa nauttia tuoreeltaan. Erinomainen herkutteluomena ja loistava soseomena.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 34,
   },
 ];
 
