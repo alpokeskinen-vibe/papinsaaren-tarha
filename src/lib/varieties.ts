@@ -10,6 +10,7 @@ import ijulskojeTshernenko from "@/assets/ijulskoje-tshernenko.png";
 import jaspi from "@/assets/jaspi.png";
 import jelena from "@/assets/jelena.png";
 import julyred from "@/assets/julyred.png";
+import junost from "@/assets/junost.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -148,6 +149,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 36,
+  },
+  {
+    name: "Junost",
+    origin: "Moskova: Koritshnoje polosatoje (Kaneliomena) × Papirovka (Valkea Kuulas)",
+    image: junost,
+    description:
+      "Junost on moskovalaista jalostusta, jonka vanhemmissa kohtaavat kaksi vanhaa klassikkoa: Kaneliomena (Koritshnoje polosatoje) ja Valkea Kuulas (Papirovka) – sukutaulu lupaa raikkautta ja perinteistä kesäomenan makua. Erinomainen vaihtoehto silloin, kun haluaa lievähappoisen kesäomenan, joka taipuu sekä napostelusta että kotitalouden moniin käyttöihin piirakasta soseeseen ja mehuun. Kesälajike, jonka omenat kypsyvät tavallisesti elokuun loppupuolella ja säilyvät korkeintaan kuukauden – siis nautittavaksi tuoreeltaan, ei talven varastoon.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 38,
   },
 ];
 
