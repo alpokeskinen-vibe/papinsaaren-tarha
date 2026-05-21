@@ -9,6 +9,7 @@ import huvitus from "@/assets/huvitus.png";
 import ijulskojeTshernenko from "@/assets/ijulskoje-tshernenko.png";
 import jaspi from "@/assets/jaspi.png";
 import jelena from "@/assets/jelena.png";
+import julyred from "@/assets/julyred.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -137,6 +138,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 24,
+  },
+  {
+    name: "Julyred",
+    origin: "Yhdysvallat: sukupuussa Melba, Early McIntosh, Williams ja Starr",
+    image: julyred,
+    description:
+      "Julyred on yhdysvaltalainen kesäomena, jonka sukupuusta löytyy melkoinen kattaus klassikoita: Melba, Early McIntosh, Williams ja Starr – sukutaulu, joka lupaa sekä väriä että aromia. Hedelmän perusväri on vihertävän keltainen, mutta pintaa peittää reilu punainen peiteväri, joka tekee omenasta jo puussa silmäänpistävän kauniin. Malto on valkoista ja mehukasta. Maku on aromaattinen ja yllättää aavistuksella boysenmarjaa – pieni metsämarjan vivahde keskellä elokuuta. Sopii sellaisenaan ja kotitalouden moniin käyttöihin. Kesäomena, joka kypsyy elokuun lopussa ja säilyy muutaman viikon. Meillä kokeiltu vain erityisen hyvällä paikalla.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 36,
   },
 ];
 
