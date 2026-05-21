@@ -6,6 +6,7 @@ import agra from "@/assets/agra.png";
 import astrakaaniPunainen from "@/assets/astrakaani-punainen.png";
 import genevaEarly from "@/assets/geneva-early.png";
 import huvitus from "@/assets/huvitus.png";
+import ijulskojeTshernenko from "@/assets/ijulskoje-tshernenko.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -104,6 +105,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 34,
+  },
+  {
+    name: "Ijulskoje Tshernenko",
+    origin: "Mitshurinsk, Venäjä: Anis alyj × Papirovka",
+    image: ijulskojeTshernenko,
+    description:
+      "Ijulskoje Tshernenko on venäläistä jalostusta Mitshurinskista, ja sukutaulussa on kaksi vahvaa klassikkoa: Anis alyj ja Papirovka – yhdistelmä, joka lupaa sekä väriä että aitoa kesäomenan makua. Peiteväri on voimakkaan kirsikanpunaista ja peittää suuren osan hedelmän pinnasta. Malto on vihertävänvalkeaa, pehmeää, hienorakeista ja mehukasta – juuri sellaista, johon hampaat uppoavat helposti. Kesälajike, jonka hedelmät kypsyvät elokuun alusta alkaen eriaikaisesti, joten poimintaa voi tehdä useaan otteeseen. Kypsyttyään omenat varisevat herkästi ja säilyvyys on melko heikko, joten parasta on nauttia tuoreeltaan tai jalostaa heti mehuksi ja soseeksi.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 22,
   },
 ];
 
