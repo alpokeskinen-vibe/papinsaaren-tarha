@@ -161,6 +161,16 @@ export const varieties: Variety[] = [
     season: "kesä",
     ripenOrder: 38,
   },
+  {
+    name: "Krasnoje ranneje",
+    origin: "Mitshurinsk: Melba × Vesna",
+    image: krasnojeRanneje,
+    description:
+      "Krasnoje rannejen pinnalla on tummanpunaista peiteväriä läikkinä ja leveinä viiruina lähes koko hedelmässä. Malto on kermanvaaleaa, tiivistä, mehukasta ja aromaattista. Maku on miellyttävän happaman-imelä ja maukas – sopii sellaisenaan, soseeksi, mehuksi ja leivontaan. Kesälajike: hedelmät kypsyvät elokuun alkupuolella ja säilyvät noin kolme viikkoa.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 22,
+  },
 ];
 
 export const featuredVarieties = varieties.filter((v) => v.featured);
