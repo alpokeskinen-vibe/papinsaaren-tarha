@@ -15,6 +15,7 @@ import krasnojeRanneje from "@/assets/krasnoje-ranneje.png";
 import mantet from "@/assets/mantet.png";
 import medunitsa from "@/assets/medunitsa.png";
 import orlinka from "@/assets/orlinka.png";
+import orlovim from "@/assets/orlovim.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -204,6 +205,17 @@ export const varieties: Variety[] = [
     season: "kesä",
     ripenOrder: 35,
   },
+  {
+    name: "Orlovim",
+    origin: "Orjol, Venäjä: Antonovka obyknovennaja × SR 0523 (Melba Red × (Volf River × Malus atrosanguinea 804))",
+    image: orlovim,
+    description:
+      "Orlovim on venäläistä jalostusta Orjolista, ja sukutaulussa kohtaavat klassinen Antonovka obyknovennaja sekä monipolvinen SR 0523, jonka takana on Melba Red ja Volf Riverin sekä Malus atrosanguinea 804:n risteytys – sukutaulu, joka tuo sekä taudinkestävyyttä että makua. Peiteväri on kirkkaanpunaista, juovina ja läikkinä, ja peittää suuren osan hedelmästä. Malto on rakenteeltaan tiivistä, karhearakeista ja erittäin mehukasta. Maku on miellyttävä, happaman-imelä ja melko aromaattinen – sopii sellaisenaan ja kotitalouden moniin käyttöihin. Syyslajike, joka kypsyy syyskuun alkupuolella. Säilyy jonkun viikon, mutta menettää nopeasti arvoaan, joten paras nauttia tuoreeltaan.",
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 48,
+  },
+
 ];
 
 export const featuredVarieties = varieties.filter((v) => v.featured);
