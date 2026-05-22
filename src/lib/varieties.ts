@@ -16,6 +16,7 @@ import mantet from "@/assets/mantet.png";
 import medunitsa from "@/assets/medunitsa.png";
 import orlinka from "@/assets/orlinka.png";
 import orlovim from "@/assets/orlovim.png";
+import orlovskojePolosatoje from "@/assets/orlovskoje-polosatoje.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -215,6 +216,17 @@ export const varieties: Variety[] = [
     season: "syys",
     ripenOrder: 48,
   },
+  {
+    name: "Orlovskoje polosatoje",
+    origin: "Orjol, Venäjä: McIntosh × Bessemjanka mitshurinskaja",
+    image: orlovskojePolosatoje,
+    description:
+      "Orlovskoje polosatoje on venäläistä jalostusta Orjolista, ja sukutaulussa kohtaavat kanadalainen klassikko McIntosh sekä Bessemjanka mitshurinskaja. Hedelmät ovat laadukkaita ja kauniin juovikkaan punaisia. Malto on valkeaa, hienorakeista, keskikovaa ja erittäin mehukasta. Maku on aromaattinen ja erittäin hyvä – sopii sellaisenaan ja kotitalouden moniin käyttöihin piirakasta soseeseen ja mehuun. Syyslajike: hedelmät kypsyvät syyskuun keskivaiheilla ja säilyvät korkeintaan joulukuulle. Meillä kokeiltu vain erityisen hyvällä paikalla.",
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 52,
+  },
+
 
 ];
 
