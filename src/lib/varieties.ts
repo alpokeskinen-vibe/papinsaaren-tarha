@@ -11,6 +11,7 @@ import jaspi from "@/assets/jaspi.png";
 import jelena from "@/assets/jelena.png";
 import julyred from "@/assets/julyred.png";
 import junost from "@/assets/junost.png";
+import krasnojeRanneje from "@/assets/krasnoje-ranneje.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
