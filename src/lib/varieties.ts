@@ -11,6 +11,7 @@ import jaspi from "@/assets/jaspi.png";
 import jelena from "@/assets/jelena.png";
 import julyred from "@/assets/julyred.png";
 import junost from "@/assets/junost.png";
+import krasnojeRanneje from "@/assets/krasnoje-ranneje.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -159,6 +160,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 38,
+  },
+  {
+    name: "Krasnoje ranneje",
+    origin: "Mitshurinsk: Melba × Vesna",
+    image: krasnojeRanneje,
+    description:
+      "Krasnoje rannejen pinnalla on tummanpunaista peiteväriä läikkinä ja leveinä viiruina lähes koko hedelmässä. Malto on kermanvaaleaa, tiivistä, mehukasta ja aromaattista. Maku on miellyttävän happaman-imelä ja maukas – sopii sellaisenaan, soseeksi, mehuksi ja leivontaan. Kesälajike: hedelmät kypsyvät elokuun alkupuolella ja säilyvät noin kolme viikkoa.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 22,
   },
 ];
 
