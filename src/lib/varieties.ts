@@ -12,6 +12,7 @@ import jelena from "@/assets/jelena.png";
 import julyred from "@/assets/julyred.png";
 import junost from "@/assets/junost.png";
 import krasnojeRanneje from "@/assets/krasnoje-ranneje.png";
+import mantet from "@/assets/mantet.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -170,6 +171,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 22,
+  },
+  {
+    name: "Mantet",
+    origin: "Kanada: Moskovan päärynäomenan vapaapölytteisestä siemenestä",
+    image: mantet,
+    description:
+      "Mantetin pinnalla on kirkkaanpunaista peiteväriä viiruina ja läikkinä suurimmalla osalla hedelmää. Malto on valkeaa, hienorakeista ja mehukasta – yksi kaikkein hienoimmanmakuisista kesäomenista. Sopii erinomaisesti sellaisenaan nautittavaksi sekä kotitalouden mehuihin, soseisiin ja leivontaan. Kesälajike: hedelmät kypsyvät epätasaisesti syyskuuhun mennessä ja säilyvät varastossa hyvänmakuisina korkeintaan kuukauden.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 40,
   },
 ];
 
