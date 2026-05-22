@@ -13,6 +13,7 @@ import julyred from "@/assets/julyred.png";
 import junost from "@/assets/junost.png";
 import krasnojeRanneje from "@/assets/krasnoje-ranneje.png";
 import mantet from "@/assets/mantet.png";
+import medunitsa from "@/assets/medunitsa.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -181,6 +182,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 40,
+  },
+  {
+    name: "Medunitsa",
+    origin: "Mitshurinsk: Wealthy × Koritshnoje polosatoje (Kaneliomena)",
+    image: medunitsa,
+    description:
+      "Medunitsa on venäläistä jalostusta Mitshurinskista, ja sukutaulussa kohtaavat amerikkalainen Wealthy ja vanha Kaneliomena (Koritshnoje polosatoje). Peitevärinä on ruskehtavanpunaisia juovia auringon puoleisella poskella. Malto on tiivistä, hienorakeista, mehukasta ja väriltään kermanvalkeaa. Maku on miellyttävä ja hunajanmausteisen makea – nimi Medunitsa viittaakin hunajaan. Sopii sellaisenaan ja kotitalouden moniin käyttöihin. Kesäomena: hedelmät kypsyvät syyskuun alussa ja säilyvät noin kuukauden.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 42,
   },
 ];
 
