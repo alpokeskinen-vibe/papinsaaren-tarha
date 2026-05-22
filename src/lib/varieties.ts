@@ -14,6 +14,7 @@ import junost from "@/assets/junost.png";
 import krasnojeRanneje from "@/assets/krasnoje-ranneje.png";
 import mantet from "@/assets/mantet.png";
 import medunitsa from "@/assets/medunitsa.png";
+import orlinka from "@/assets/orlinka.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -192,6 +193,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 42,
+  },
+  {
+    name: "Orlinka",
+    origin: "Orjol, Venäjä: Stark's Earliest × Pervyj saljut",
+    image: orlinka,
+    description:
+      "Orlinka on venäläistä jalostusta Orjolista, ja sukutaulussa kohtaavat amerikkalainen Stark's Earliest ja venäläinen Pervyj saljut. Peiteväri on kirkkaanpunaista, juovina ja läikkinä. Malto on kermanvaaleaa, tiivistä, rapeaa, mehuisaa ja suurirakeista. Omenat ovat hyvänmakuisia, happaman-imeliä ja miellyttävän mausteisia – sopivat sellaisenaan ja kotitalouden moniin käyttöihin. Kesälajike, joka kypsyy elokuun puolivälin jälkeen. Säilyy jonkun viikon, mutta menettää nopeasti arvoaan, joten paras nauttia tuoreeltaan.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 35,
   },
 ];
 
