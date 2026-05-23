@@ -21,6 +21,7 @@ import pirja from "@/assets/pirja.png";
 import redFree from "@/assets/red-free.png";
 import roberts from "@/assets/roberts.png";
 import rosmarin from "@/assets/rosmarin.png";
+import slavaPobediteljam from "@/assets/slava-pobediteljam.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -269,6 +270,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 26,
+  },
+  {
+    name: "Slava pobediteljam",
+    origin: "Ukraina: Papirovka × McIntosh (tunnetaan myös nimellä Slava peremozhtsam)",
+    image: slavaPobediteljam,
+    description:
+      "Slava pobediteljam on ukrainalainen lajike, jonka vanhempina ovat Papirovka ja McIntosh – tunnetaan myös nimellä Slava peremozhtsam. Peiteväri on tummanpunaista ja peittää suurimman osan hedelmän pinnasta. Malto on väriltään lähes valkoista, joskus punajuovaista. Omenat ovat maultaan happaman-imeliä, aromaattisia ja erittäin miellyttäviä – sopivat sellaisenaan ja kotitalouden moniin käyttöihin. Syyslajike: omenat kypsyvät syyskuun puolivälissä ja säilyvät marraskuulle. Tämän puun erottaa jo kaukaa punaisesta runsaasta sadosta.",
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 54,
   },
 ];
 
