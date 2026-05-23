@@ -18,6 +18,7 @@ import orlinka from "@/assets/orlinka.png";
 import orlovim from "@/assets/orlovim.png";
 import orlovskojePolosatoje from "@/assets/orlovskoje-polosatoje.png";
 import pirja from "@/assets/pirja.png";
+import redFree from "@/assets/red-free.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -236,6 +237,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 18,
+  },
+  {
+    name: "Red Free",
+    origin: "Yhdysvallat, PRI-jalostusohjelma (ruvenkestävä lajike)",
+    image: redFree,
+    description:
+      "Red Free on yhdysvaltalaisen PRI-jalostusohjelman tulosta – ohjelman tavoitteena oli kehittää ruvenkestäviä omenalajikkeita. Hedelmä on näyttävän punainen ja suurikokoinen. Kun omenia tulee runsaasti, kääpiörunkoisen puun hedelmät jäävät helposti pienikokoisiksi. Malto on kermanvaaleaa ja suhteellisen tiivistä. Mehevät hedelmät ovat maultaan erinomaisia, happaman-imeliä – happo-sokerisuhde on hyvä ja aromikkuutta on runsaasti. Syyslajike: kypsyy syyskuun puolivälissä ja säilyy noin 2 kuukautta. Meillä kokeiltu vain erityisen hyvällä paikalla.",
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 54,
   },
 ];
 
