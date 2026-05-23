@@ -17,6 +17,7 @@ import medunitsa from "@/assets/medunitsa.png";
 import orlinka from "@/assets/orlinka.png";
 import orlovim from "@/assets/orlovim.png";
 import orlovskojePolosatoje from "@/assets/orlovskoje-polosatoje.png";
+import pirja from "@/assets/pirja.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -226,8 +227,16 @@ export const varieties: Variety[] = [
     season: "syys",
     ripenOrder: 52,
   },
-
-
+  {
+    name: "Pirja",
+    origin: "Piikiön jaloste, Suomi: Huvitus × Melba",
+    image: pirja,
+    description:
+      "Pirja on suomalainen Piikiön jaloste, jonka vanhempina ovat Huvitus ja Melba. Keltainen pohjaväri voi peittyä lähes kokonaan punaviiruisen peitevärin alle. Rapeassa kellertävässä mallossa näkyy joskus punaisia viiruja. Maku on miellyttävä ja miedosti aromaattinen – sopii hyvin tuorekäyttöön. Kesäomena, joka kypsyy heinä-elokuun vaihteessa ja säilyy noin kaksi viikkoa.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 18,
+  },
 ];
 
 export const featuredVarieties = varieties.filter((v) => v.featured);
