@@ -22,6 +22,7 @@ import redFree from "@/assets/red-free.png";
 import roberts from "@/assets/roberts.png";
 import rosmarin from "@/assets/rosmarin.png";
 import slavaPobediteljam from "@/assets/slava-pobediteljam.png";
+import solntsedar from "@/assets/solntsedar.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -280,6 +281,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 54,
+  },
+  {
+    name: "Solntsedar",
+    origin: "Jekaterinburg, Venäjä: Anis alyj -lajikkeen vapaapölytteisestä siemenestä",
+    image: solntsedar,
+    description:
+      "Solntsedar on venäläistä jalostusta Jekaterinburgista, ja sen taustalla on Anis alyj -lajikkeen vapaapölytteinen siemen. Peiteväri on tumman-ruusunpunaista ja peittää suuren osan hedelmän pinnasta. Malto on lumivalkeaa, usein punajuovaista ja suurirakeista. Maku on viinihappoisen makea – sopii sellaisenaan ja kotitalouden moniin käyttöihin. Kesälajike: hedelmät kypsyvät elokuun puolivälin tienoilla ja säilyvät noin 10 päivää. Kypsyttyään omenat voivat tippua yhtenä tuulisena päivänä, joten poiminta kannattaa ajoittaa tarkkaan.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 33,
   },
 ];
 
