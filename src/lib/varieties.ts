@@ -20,6 +20,7 @@ import orlovskojePolosatoje from "@/assets/orlovskoje-polosatoje.png";
 import pirja from "@/assets/pirja.png";
 import redFree from "@/assets/red-free.png";
 import roberts from "@/assets/roberts.png";
+import rosmarin from "@/assets/rosmarin.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -258,6 +259,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 50,
+  },
+  {
+    name: "Rosmarin",
+    origin: "Novi, Venäjä – venäläisen Rosmarin-omenan risteytymä",
+    image: rosmarin,
+    description:
+      "Rosmarin on venäläisen Rosmarin-omenan risteytymä Novin jalostuksesta. Kypsänä hedelmä on kellertävä ja saa auringon puolelle punaisia laikkuja ja pisteitä. Malto on mehevää, valkoista ja hienorakeista. Maku on miedon imelän-mausteinen – sopii sellaisenaan syötäväksi sekä mehuihin ja jälkiruokiin. Kesäomena, joka säilyy noin pari viikkoa.",
+    fruit: "omena",
+    season: "kesä",
+    ripenOrder: 26,
   },
 ];
 
