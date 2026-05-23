@@ -19,6 +19,7 @@ import orlovim from "@/assets/orlovim.png";
 import orlovskojePolosatoje from "@/assets/orlovskoje-polosatoje.png";
 import pirja from "@/assets/pirja.png";
 import redFree from "@/assets/red-free.png";
+import roberts from "@/assets/roberts.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -247,6 +248,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 54,
+  },
+  {
+    name: "Roberts",
+    origin: "Latvia: BM41497 (Pernilla) × Eksotika (Iedzenu × Slava pobediteljam)",
+    image: roberts,
+    description:
+      "Roberts on latvialainen lajike, jonka vanhempina ovat BM41497 (Pernilla) ja Eksotika (Iedzenu × Slava pobediteljam). Hedelmät ovat melko kookkaita ja erittäin kauniin punaisia – näyttävä näky jo kaukaa. Malto on kellertävää, ja heti kuoren alta punertavaa; joskus rakenne voi olla varsin kova. Maku on aromaattinen ja erittäin maukas, ja omena sopii sellaisenaan sekä kotitalouden moniin käyttöihin. Syyslajike: hedelmät kypsyvät syyskuun alkupuolella ja säilyvät noin kuukauden.",
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 50,
   },
 ];
 
