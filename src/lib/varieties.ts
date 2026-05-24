@@ -23,6 +23,7 @@ import roberts from "@/assets/roberts.png";
 import rosmarin from "@/assets/rosmarin.png";
 import slavaPobediteljam from "@/assets/slava-pobediteljam.png";
 import solntsedar from "@/assets/solntsedar.png";
+import solnyshko from "@/assets/solnyshko.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -291,6 +292,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 33,
+  },
+  {
+    name: "Solnyshko",
+    origin: "Orjol, Venäjä: Malus floribunda 821 × Golden Delicious (vapaapölytteinen siemen)",
+    image: solnyshko,
+    description:
+      "Solnyshko on orjolilaista jalostusta, taustalla Malus floribunda 821 ja Golden Delicious -vapaapölytteinen siemen. Peiteväri on vadelmanpunaista, läikkinä ja viiruina, peittäen suuren osan hedelmän pinnasta. Malto on valkeaa tai kermanvaaleaa, tiivistä, hienorakeista ja erittäin mehukasta. Maultaan hedelmät ovat happaman-imeliä ja erittäin maukkaita – sopivat hyvin kotitalouden moniin käyttöihin. Syyslajike: hedelmät kypsyvät syyskuun lopussa ja säilyvät noin kaksi kuukautta.",
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 60,
   },
 ];
 
