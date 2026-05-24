@@ -267,7 +267,7 @@ export const varieties: Variety[] = [
     origin: "Novi, Venäjä – venäläisen Rosmarin-omenan risteytymä",
     image: rosmarin,
     description:
-      "Rosmarin on venäläisen Rosmarin-omenan risteytymä Novin jalostuksesta. Kypsänä hedelmä on kellertävä ja saa auringon puolelle punaisia laikkuja ja pisteitä. Malto on mehevää, valkoista ja hienorakeista. Maku on miedon imelän-mausteinen – sopii sellaisenaan syötäväksi sekä mehuihin ja jälkiruokiin. Kesäomena, joka säilyy noin pari viikkoa.",
+      "Rosmarin on venäläisen Rosmarin-omenan risteytymä Novin jalostuksesta. Kypsänä hedelmä on kellertävä ja saa auringon puolelle punaisia laikkuja ja pisteitä. Malto on mehevää, valkoista ja hienorakeista. Maku on miedon imelän-mausteinen – sopii sellaisenaan syötäväksi sekä mehuihin ja jälkiruokiin. Kesäomena, joka kypsyy syyskuun alusta alkaen ja säilyy pari viikkoa.",
     fruit: "omena",
     season: "kesä",
     ripenOrder: 26,
