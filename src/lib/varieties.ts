@@ -25,6 +25,7 @@ import slavaPobediteljam from "@/assets/slava-pobediteljam.png";
 import solntsedar from "@/assets/solntsedar.png";
 import solnyshko from "@/assets/solnyshko.png";
 import studentsheskoje from "@/assets/studentsheskoje.png";
+import tshistotel from "@/assets/tshistotel.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -313,6 +314,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "talvi",
     ripenOrder: 82,
+  },
+  {
+    name: "Tshistotel",
+    origin: "Orjol, Venäjä: Antonovka obyknovennaja × SR 0523 (Red Melba × (Volf River × Malus atrosanguinea 804))",
+    image: tshistotel,
+    description:
+      "Tshistotel on orjolilaista jalostusta, ja sukutaulussa kohtaavat klassinen Antonovka obyknovennaja sekä monipolvinen SR 0523, jonka takana on Red Melba ja Volf Riverin sekä Malus atrosanguinea 804:n risteytys. Peiteväriä on auringon puolella ruskeanpunaisina läikkinä ja tummanpunaisina viiruina. Malto on väriltään vihertävää, suhteellisen tiivistä, hienorakeista ja mehuisaa. Maultaan hedelmät ovat hyvän happaman-imeliä, mutta jäävät vaatimattomiksi epäsuotuisana kesänä. Sopii sellaisenaan ja kotitalouden moniin käyttöihin. Talviomena: kypsyy lokakuun lopussa ja säilyy pitkään. Kääpiörunkoisen oksat näännyttävät omenien suuresta määrästä ilman raakileharvennusta.",
+    fruit: "omena",
+    season: "talvi",
+    ripenOrder: 84,
   },
 ];
 
