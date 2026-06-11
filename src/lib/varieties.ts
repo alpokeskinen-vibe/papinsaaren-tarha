@@ -301,7 +301,7 @@ export const varieties: Variety[] = [
       "Solnyshko on orjolilaista jalostusta, taustalla Malus floribunda 821 ja Golden Delicious -vapaapölytteinen siemen. Peiteväri on vadelmanpunaista, läikkinä ja viiruina, peittäen suuren osan hedelmän pinnasta. Malto on valkeaa tai kermanvaaleaa, tiivistä, hienorakeista ja erittäin mehukasta. Maultaan hedelmät ovat happaman-imeliä ja erittäin maukkaita – sopivat hyvin kotitalouden moniin käyttöihin. Syyslajike: hedelmät kypsyvät syyskuun lopussa ja säilyvät noin kaksi kuukautta.",
     fruit: "omena",
     season: "syys",
-    ripenOrder: 60,
+    ripenOrder: 65,
   },
 ];
 
