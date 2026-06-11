@@ -26,6 +26,7 @@ import solntsedar from "@/assets/solntsedar.png";
 import solnyshko from "@/assets/solnyshko.png";
 import studentsheskoje from "@/assets/studentsheskoje.png";
 import tshistotel from "@/assets/tshistotel.png";
+import uslada from "@/assets/uslada.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
