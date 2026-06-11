@@ -24,6 +24,7 @@ import rosmarin from "@/assets/rosmarin.png";
 import slavaPobediteljam from "@/assets/slava-pobediteljam.png";
 import solntsedar from "@/assets/solntsedar.png";
 import solnyshko from "@/assets/solnyshko.png";
+import studentsheskoje from "@/assets/studentsheskoje.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -302,6 +303,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 65,
+  },
+  {
+    name: "Studentsheskoje",
+    origin: "Moskova, Venäjä: Wealthy × Bessemjanka mitshurinskaja",
+    image: studentsheskoje,
+    description:
+      "Studentsheskoje on moskovalaista jalostusta, ja sukutaulussa kohtaavat amerikkalainen Wealthy ja venäläinen Bessemjanka mitshurinskaja. Hedelmä on vadelmanpunaista, viiruina ja läikkinä. Malto on vaalean-vihertävää, hienorakeista ja mehukasta. Maku on happaman-imelä ja erittäin miellyttävä – joku on havainnut mehussa lievää tanniinisuutta. Sopii sellaisenaan ja kotitalouden moniin käyttöihin. Talviomena: kypsyy lokakuun aikana ja säilyy hyvissä olosuhteissa jopa kevääseen. Omenat pysyvät hyvin puussa talventuloa odotellen.",
+    fruit: "omena",
+    season: "talvi",
+    ripenOrder: 82,
   },
 ];
 
