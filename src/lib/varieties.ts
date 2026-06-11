@@ -26,6 +26,7 @@ import solntsedar from "@/assets/solntsedar.png";
 import solnyshko from "@/assets/solnyshko.png";
 import studentsheskoje from "@/assets/studentsheskoje.png";
 import tshistotel from "@/assets/tshistotel.png";
+import uslada from "@/assets/uslada.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -324,6 +325,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "talvi",
     ripenOrder: 84,
+  },
+  {
+    name: "Uslada",
+    origin: "Moskova, Venäjä: Narodnoje × Severjanka",
+    image: uslada,
+    description:
+      "Uslada on moskovalaista jalostusta, ja sukutaulussa kohtaavat Narodnoje ja Severjanka. Hedelmät ovat kauniita: peiteväri on auringon puolella punaisina läikkinä ja viiruina, suurella osalla pinnasta. Malto on hienorakeista ja mehukasta, väriltään valkeaa. Omenat ovat happaman-imeliä ja maultaan erittäin miellyttäviä – joku on havainnut mehussa lievää tanniinisuutta. Sopii sellaisenaan ja kotitalouden moniin käyttöihin. Hyvä syyslajike: alkaa kypsyä syyskuun puolivälissä ja säilyy noin kaksi kuukautta.",
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 53,
   },
 ];
 
