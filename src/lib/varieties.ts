@@ -24,6 +24,7 @@ import rosmarin from "@/assets/rosmarin.png";
 import slavaPobediteljam from "@/assets/slava-pobediteljam.png";
 import solntsedar from "@/assets/solntsedar.png";
 import solnyshko from "@/assets/solnyshko.png";
+import studentsheskoje from "@/assets/studentsheskoje.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
