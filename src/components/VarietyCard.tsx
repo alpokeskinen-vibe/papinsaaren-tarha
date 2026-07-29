@@ -1,8 +1,5 @@
 import { useState } from "react";
-import {
-  fruitLabels,
-  seasonLabels,
-} from "@/lib/varieties";
+import { fruitLabels, seasonLabels } from "@/lib/varieties";
 import type { Variety } from "@/lib/varieties";
 
 export function VarietyCard({ variety }: { variety: Variety }) {
@@ -16,15 +13,26 @@ export function VarietyCard({ variety }: { variety: Variety }) {
   return (
     <article className="group rounded-2xl bg-background/70 p-6 shadow-sm ring-1 ring-border/50 transition hover:-translate-y-1 hover:shadow-xl">
       <div className="flex h-56 items-center justify-center">
-        <img
-          src={variety.image}
-          alt={variety.name}
-          className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-        />
+        {variety.image ? (
+          <img
+            src={variety.image}
+            alt={variety.name}
+            className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center rounded-xl bg-orchard-soft text-sm text-muted-foreground">
+            Kuva tulossa
+          </div>
+        )}
       </div>
 
       <div className="mt-6 flex items-center justify-between gap-3">
-        <h3 className="text-2xl font-semibold text-primary">{variety.name}</h3>
+        <div className="min-w-0">
+          <h3 className="text-2xl font-semibold text-primary">{variety.name}</h3>
+          {variety.trait && (
+            <p className="mt-1 text-sm font-medium text-orchard">{variety.trait}</p>
+          )}
+        </div>
         <span className="shrink-0 rounded-full bg-orchard-soft px-3 py-1 text-[10px] uppercase tracking-wider text-orchard">
           {seasonLabel}
         </span>
@@ -37,11 +45,18 @@ export function VarietyCard({ variety }: { variety: Variety }) {
         aria-expanded={open}
         aria-label={open ? "Sulje kuvaus" : "Avaa kuvaus"}
       >
+        {open ? "Piilota tiedot" : "Näytä tiedot"}
         <ChevronIcon open={open} />
       </button>
 
       {open && (
-        <div className="mt-4 text-sm leading-relaxed text-foreground/80">
+        <div className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/80">
+          {variety.uses && variety.uses.length > 0 && (
+            <p>
+              <span className="font-medium text-foreground">Käyttö: </span>
+              {variety.uses.join(", ")}.
+            </p>
+          )}
           <p>{variety.description}</p>
         </div>
       )}

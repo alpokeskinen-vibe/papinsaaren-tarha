@@ -1,7 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import {
-  varieties,
+  visibleVarieties,
   fruitLabels,
   seasonLabels,
   type FruitType,
@@ -9,32 +8,17 @@ import {
 } from "@/lib/varieties";
 import { VarietyCard } from "@/components/VarietyCard";
 
-export const Route = createFileRoute("/kaikki")({
-  head: () => ({
-    meta: [
-      { title: "Kaikki lajikkeet — Papinsaaren Tarha" },
-      {
-        name: "description",
-        content:
-          "Papinsaaren Tarhan koko lajikevalikoima: omenat, päärynät ja kirsikat. Suodata hedelmätyypin ja kauden mukaan.",
-      },
-      { name: "robots", content: "noindex" },
-    ],
-  }),
-  component: AllVarieties,
-});
-
 type FruitFilter = "kaikki" | FruitType;
 type SeasonFilter = "kaikki" | AppleSeason;
 type SortMode = "aakkoset" | "kypsymis";
 
-function AllVarieties() {
+export function AllVarieties() {
   const [fruit, setFruit] = useState<FruitFilter>("kaikki");
   const [season, setSeason] = useState<SeasonFilter>("kaikki");
   const [sort, setSort] = useState<SortMode>("aakkoset");
 
   const list = useMemo(() => {
-    let l = varieties.slice();
+    let l = visibleVarieties.slice();
     if (fruit !== "kaikki") l = l.filter((v) => v.fruit === fruit);
     if (fruit === "omena" && season !== "kaikki") {
       l = l.filter((v) => v.season === season);
@@ -74,27 +58,21 @@ function AllVarieties() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border/60">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <Link to="/" className="block">
-            <p className="font-display text-xl font-semibold text-primary">
-              Papinsaaren Tarha
-            </p>
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              Kuhmoinen
-            </p>
-          </Link>
-          <Link to="/" className="text-sm text-muted-foreground hover:text-primary">
+          <a href="./" className="block">
+            <p className="font-display text-xl font-semibold text-primary">Papinsaaren Tarha</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Kuhmoinen</p>
+          </a>
+          <a href="./" className="text-sm text-muted-foreground hover:text-primary">
             ← Etusivulle
-          </Link>
+          </a>
         </div>
       </header>
 
       <section className="mx-auto max-w-6xl px-6 py-16">
-        <h1 className="font-display text-4xl font-semibold md:text-5xl">
-          Kaikki lajikkeet
-        </h1>
+        <h1 className="font-display text-4xl font-semibold md:text-5xl">Kaikki lajikkeet</h1>
         <p className="mt-3 max-w-2xl text-muted-foreground">
-          Tarhan koko valikoima. Suodata hedelmätyypin ja kauden mukaan tai
-          järjestä kypsymisjärjestyksessä.
+          Tarhan koko valikoima. Suodata hedelmätyypin ja kauden mukaan tai järjestä
+          kypsymisjärjestyksessä.
         </p>
 
         <div className="mt-10 flex flex-wrap items-end gap-6 rounded-2xl border border-border/60 bg-orchard-soft/40 p-6">
@@ -116,11 +94,7 @@ function AllVarieties() {
           {fruit === "omena" && (
             <FilterGroup label="Kausi">
               {seasonOptions.map((o) => (
-                <Chip
-                  key={o.value}
-                  active={season === o.value}
-                  onClick={() => setSeason(o.value)}
-                >
+                <Chip key={o.value} active={season === o.value} onClick={() => setSeason(o.value)}>
                   {o.label}
                 </Chip>
               ))}
@@ -153,13 +127,7 @@ function AllVarieties() {
   );
 }
 
-function FilterGroup({
-  label,
-  children,
-}: {
-  label: string;
-  children: React.ReactNode;
-}) {
+function FilterGroup({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-col gap-2">
       <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
