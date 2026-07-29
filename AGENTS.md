@@ -49,6 +49,30 @@ Muotoile koodi:
 bun run format
 ```
 
+## Julkaisu GitHub Pagesiin
+
+Sivusto julkaistaan staattisena buildina `gh-pages`-branchilta. Paivita julkaisu
+rakentamalla `dist/` ja puskemalla sen sisalto `gh-pages`-branchin juureen.
+GitHub Pagesin lahde on `gh-pages` / `/`.
+
+Yksinkertainen julkaisutapa:
+
+```bash
+bun run build
+tmpdir=$(mktemp -d)
+cp -a dist/. "$tmpdir/"
+touch "$tmpdir/.nojekyll"
+git -C "$tmpdir" init
+git -C "$tmpdir" checkout -b gh-pages
+git -C "$tmpdir" add -A
+git -C "$tmpdir" commit -m "Deploy site"
+git -C "$tmpdir" remote add origin https://github.com/alpokeskinen-vibe/papinsaaren-tarha.git
+git -C "$tmpdir" push --force origin gh-pages
+```
+
+Varsinainen lahdekoodi pidetaan `main`-branchilla. Ala commitoi `dist/`-hakemistoa
+`main`-branchille.
+
 ## Huomioita agenteille
 
 - Vastaa kayttajalle suomeksi, ellei kayttaja nimenomaisesti pyyda muuta kielta.
