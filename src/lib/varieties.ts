@@ -405,6 +405,7 @@ export const varieties: Variety[] = [
   {
     name: "Uslada",
     origin: "Moskova: Narodnoje × Severjanka",
+    image: uslada,
     description:
       "Uslada on moskovalainen syyslajike, jonka hedelmät ovat kauniita ja suurelta osin punertavia auringon puolelta. Peiteväri näkyy juovina ja laikkuina. Malto on vaaleaa, hienorakeista ja mehukasta. Maku on happaman-imelä ja erittäin miellyttävä; mehussa voi olla lievää tanniinisuutta. Hyvä syyslajike alkaa kypsyä syyskuun puolivälissä ja säilyy noin kaksi kuukautta.",
     trait: "Miellyttävä",
@@ -488,19 +489,6 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "talvi",
     ripenOrder: 84,
-    visible: false,
-  },
-  {
-    name: "Uslada",
-    origin: "Moskova, Venäjä: Narodnoje × Severjanka",
-    image: uslada,
-    description:
-      "Uslada on moskovalaista jalostusta, ja sukutaulussa kohtaavat Narodnoje ja Severjanka. Hedelmät ovat kauniita: peiteväri on auringon puolella punaisina läikkinä ja viiruina, suurella osalla pinnasta. Malto on hienorakeista ja mehukasta, väriltään valkeaa. Omenat ovat happaman-imeliä ja maultaan erittäin miellyttäviä; mehussa voi olla lievää tanniinisuutta. Sopii sellaisenaan ja kotitalouden moniin käyttöihin. Hyvä syyslajike: alkaa kypsyä syyskuun puolivälissä ja säilyy noin kaksi kuukautta.",
-    trait: "Miellyttävä",
-    uses: ["tuoreena", "kotitalouskäyttöön", "säilytykseen"],
-    fruit: "omena",
-    season: "syys",
-    ripenOrder: 53,
     visible: false,
   },
   {
