@@ -24,6 +24,9 @@ import rosmarin from "@/assets/rosmarin.png";
 import slavaPobediteljam from "@/assets/slava-pobediteljam.png";
 import solntsedar from "@/assets/solntsedar.png";
 import solnyshko from "@/assets/solnyshko.png";
+import studentsheskoje from "@/assets/studentsheskoje.png";
+import tshistotel from "@/assets/tshistotel.png";
+import uslada from "@/assets/uslada.png";
 
 export type FruitType = "omena" | "päärynä" | "kirsikka";
 export type AppleSeason = "kesä" | "syys" | "talvi";
@@ -463,6 +466,7 @@ export const varieties: Variety[] = [
   {
     name: "Studentsheskoje",
     origin: "Moskova: Wealthy × Bessemjanka mitshurinskaja",
+    image: studentsheskoje,
     description:
       "Studentsheskoje on Moskovasta peräisin oleva talviomena. Hedelmissä on vadelmanpunaista peiteväriä viiruina ja läikkinä. Malto on vaaleanvihertävää, hienorakeista ja mehukasta. Maku on happaman-imelä ja erittäin miellyttävä; mehussa voi olla lievää tanniinisuutta. Sopii monipuoliseen kotitalouskäyttöön. Talviomena kypsyy lokakuun aikana ja säilyy hyvissä olosuhteissa jopa kevääseen. Omenat pysyvät hyvin puussa talven tuloa odotellessa.",
     trait: "Säilyvä",
@@ -470,6 +474,33 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "talvi",
     ripenOrder: 88,
+    visible: false,
+  },
+  {
+    name: "Tshistotel",
+    origin:
+      "Orjol, Venäjä: Antonovka obyknovennaja × SR 0523 (Red Melba × (Volf River × Malus atrosanguinea 804))",
+    image: tshistotel,
+    description:
+      "Tshistotel on orjolilaista jalostusta, ja sukutaulussa kohtaavat klassinen Antonovka obyknovennaja sekä monipolvinen SR 0523, jonka takana on Red Melba ja Volf Riverin sekä Malus atrosanguinea 804:n risteytys. Peiteväriä on auringon puolella ruskeanpunaisina läikkinä ja tummanpunaisina viiruina. Malto on väriltään vihertävää, suhteellisen tiivistä, hienorakeista ja mehuisaa. Maultaan hedelmät ovat hyvän happaman-imeliä, mutta jäävät vaatimattomiksi epäsuotuisana kesänä. Sopii sellaisenaan ja kotitalouden moniin käyttöihin. Talviomena: kypsyy lokakuun lopussa ja säilyy pitkään. Kääpiörunkoisen oksat näännyttävät omenien suuresta määrästä ilman raakileharvennusta.",
+    trait: "Mehuisa",
+    uses: ["tuoreena", "kotitalouskäyttöön", "säilytykseen"],
+    fruit: "omena",
+    season: "talvi",
+    ripenOrder: 84,
+    visible: false,
+  },
+  {
+    name: "Uslada",
+    origin: "Moskova, Venäjä: Narodnoje × Severjanka",
+    image: uslada,
+    description:
+      "Uslada on moskovalaista jalostusta, ja sukutaulussa kohtaavat Narodnoje ja Severjanka. Hedelmät ovat kauniita: peiteväri on auringon puolella punaisina läikkinä ja viiruina, suurella osalla pinnasta. Malto on hienorakeista ja mehukasta, väriltään valkeaa. Omenat ovat happaman-imeliä ja maultaan erittäin miellyttäviä; mehussa voi olla lievää tanniinisuutta. Sopii sellaisenaan ja kotitalouden moniin käyttöihin. Hyvä syyslajike: alkaa kypsyä syyskuun puolivälissä ja säilyy noin kaksi kuukautta.",
+    trait: "Miellyttävä",
+    uses: ["tuoreena", "kotitalouskäyttöön", "säilytykseen"],
+    fruit: "omena",
+    season: "syys",
+    ripenOrder: 53,
     visible: false,
   },
   {
