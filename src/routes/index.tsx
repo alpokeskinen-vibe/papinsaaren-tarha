@@ -133,8 +133,8 @@ export function Index() {
         <p className="mt-1">Papinsaarentie 160, Kuhmoinen</p>
         <p className="mt-1">Alpo Keskinen</p>
         <p className="mt-1">
-          <a href="tel:+358456330205" className="hover:text-primary">
-            045 63302053
+          <a href="tel:+358456302053" className="hover:text-primary">
+            045 630 2053
           </a>
         </p>
         <p className="mt-4 text-xs">© {new Date().getFullYear()} Papinsaaren Tarha</p>

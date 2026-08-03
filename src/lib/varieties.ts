@@ -113,7 +113,7 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 32,
-    visible: false,
+    visible: true,
   },
   {
     name: "Agra",
@@ -139,7 +139,8 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 20,
-    visible: false,
+    visible: true,
+    featured: true,
   },
   {
     name: "Huvitus",
@@ -151,7 +152,7 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 34,
-    visible: false,
+    visible: true,
   },
   {
     name: "Ijulskoje Tshernenko",
@@ -177,7 +178,7 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 55,
-    visible: false,
+    visible: true,
   },
   {
     name: "Jelena",
@@ -189,7 +190,7 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 24,
-    visible: false,
+    visible: true,
   },
   {
     name: "Julyred",
@@ -215,10 +216,11 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 38,
-    visible: false,
+    visible: true,
+    featured: true,
   },
   {
-    name: "Krasnoje",
+    name: "Krasnoje ranneje",
     origin: "Mitshurinsk: Melba × Vesna",
     image: krasnojeRanneje,
     description:
@@ -241,7 +243,7 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 40,
-    visible: false,
+    visible: true,
   },
   {
     name: "Medunitsa",
@@ -253,7 +255,7 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 42,
-    visible: false,
+    visible: true,
   },
   {
     name: "Orlinka",
@@ -280,7 +282,8 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 48,
-    visible: false,
+    visible: true,
+    featured: true,
   },
   {
     name: "Orlovskoje polosatoje",
@@ -292,7 +295,8 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 52,
-    visible: false,
+    visible: true,
+    featured: true,
   },
   {
     name: "Pirja",
@@ -309,11 +313,11 @@ export const varieties: Variety[] = [
     featured: true,
   },
   {
-    name: "Redfree",
+    name: "Red Free",
     origin: "Yhdysvallat, PRI-jalostusohjelma (ruvenkestävä lajike)",
     image: redFree,
     description:
-      "Redfree on yhdysvaltalaisen PRI-jalostusohjelman tulosta – ohjelman tavoitteena oli kehittää ruvenkestäviä omenalajikkeita. Hedelmä on näyttävän punainen ja suurikokoinen. Kun omenia tulee runsaasti, kääpiörunkoisen puun hedelmät jäävät helposti pienikokoisiksi. Malto on kermanvaaleaa ja suhteellisen tiivistä. Mehevät hedelmät ovat maultaan erinomaisia, happaman-imeliä – happo-sokerisuhde on hyvä ja aromikkuutta on runsaasti. Syyslajike: kypsyy syyskuun puolivälissä ja säilyy noin 2 kuukautta. Meillä kokeiltu vain erityisen hyvällä paikalla.",
+      "Red Free on yhdysvaltalaisen PRI-jalostusohjelman tulosta – ohjelman tavoitteena oli kehittää ruvenkestäviä omenalajikkeita. Hedelmä on näyttävän punainen ja suurikokoinen. Kun omenia tulee runsaasti, kääpiörunkoisen puun hedelmät jäävät helposti pienikokoisiksi. Malto on kermanvaaleaa ja suhteellisen tiivistä. Mehevät hedelmät ovat maultaan erinomaisia, happaman-imeliä – happo-sokerisuhde on hyvä ja aromikkuutta on runsaasti. Syyslajike: kypsyy syyskuun puolivälissä ja säilyy noin 2 kuukautta. Meillä kokeiltu vain erityisen hyvällä paikalla.",
     trait: "Aromikas",
     uses: ["tuoreena", "säilytykseen"],
     fruit: "omena",
@@ -332,14 +336,15 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 50,
-    visible: false,
+    visible: true,
+    featured: true,
   },
   {
-    name: "Rosmarin",
+    name: "Rosmariini-Novi",
     origin: "Novi, Venäjä – venäläisen Rosmarin-omenan risteytymä",
     image: rosmarin,
     description:
-      "Rosmarin on venäläisen Rosmarin-omenan risteytymä Novin jalostuksesta. Kypsänä hedelmä on kellertävä ja saa auringon puolelle punaisia laikkuja ja pisteitä. Malto on mehevää, valkoista ja hienorakeista. Maku on miedon imelän-mausteinen – sopii sellaisenaan syötäväksi sekä mehuihin ja jälkiruokiin. Kesäomena, joka kypsyy syyskuun alusta alkaen ja säilyy pari viikkoa.",
+      "Rosmariini-Novi on venäläisen Rosmarin-omenan risteytymä Novin jalostuksesta. Kypsänä hedelmä on kellertävä ja saa auringon puolelle punaisia laikkuja ja pisteitä. Malto on mehevää, valkoista ja hienorakeista. Maku on miedon imelän-mausteinen – sopii sellaisenaan syötäväksi sekä mehuihin ja jälkiruokiin. Kesäomena, joka kypsyy syyskuun alusta alkaen ja säilyy pari viikkoa.",
     trait: "Mausteinen",
     uses: ["tuoreena", "mehuksi", "jälkiruokiin"],
     fruit: "omena",
@@ -349,7 +354,7 @@ export const varieties: Variety[] = [
     featured: true,
   },
   {
-    name: "Slava",
+    name: "Slava pobediteljam",
     origin: "Ukraina: Papirovka × McIntosh (tunnetaan myös nimellä Slava peremozhtsam)",
     image: slavaPobediteljam,
     description:
@@ -372,14 +377,14 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 33,
-    visible: false,
+    visible: true,
   },
   {
-    name: "Solnusko",
+    name: "Solnyshko",
     origin: "Orjol, Venäjä: Malus floribunda 821 × Golden Delicious (vapaapölytteinen siemen)",
     image: solnyshko,
     description:
-      "Solnusko on orjolilaista jalostusta, taustalla Malus floribunda 821 ja Golden Delicious -vapaapölytteinen siemen. Peiteväri on vadelmanpunaista, läikkinä ja viiruina, peittäen suuren osan hedelmän pinnasta. Malto on valkeaa tai kermanvaaleaa, tiivistä, hienorakeista ja erittäin mehukasta. Maultaan hedelmät ovat happaman-imeliä ja erittäin maukkaita – sopivat hyvin kotitalouden moniin käyttöihin. Syyslajike: hedelmät kypsyvät syyskuun lopussa ja säilyvät noin kaksi kuukautta.",
+      "Solnyshko on orjolilaista jalostusta, taustalla Malus floribunda 821 ja Golden Delicious -vapaapölytteinen siemen. Peiteväri on vadelmanpunaista, läikkinä ja viiruina, peittäen suuren osan hedelmän pinnasta. Malto on valkeaa tai kermanvaaleaa, tiivistä, hienorakeista ja erittäin mehukasta. Maultaan hedelmät ovat happaman-imeliä ja erittäin maukkaita – sopivat hyvin kotitalouden moniin käyttöihin. Syyslajike: hedelmät kypsyvät syyskuun lopussa ja säilyvät noin kaksi kuukautta.",
     trait: "Maukas",
     uses: ["tuoreena", "kotitalouskäyttöön", "säilytykseen"],
     fruit: "omena",
@@ -426,7 +431,8 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "talvi",
     ripenOrder: 72,
-    visible: false,
+    visible: true,
+    featured: true,
   },
   {
     name: "Konsta",
@@ -438,7 +444,8 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 68,
-    visible: false,
+    visible: true,
+    featured: true,
   },
   {
     name: "Novinka",
@@ -450,7 +457,7 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 70,
-    visible: false,
+    visible: true,
   },
   {
     name: "Sariola",
@@ -462,7 +469,7 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "syys",
     ripenOrder: 74,
-    visible: false,
+    visible: true,
   },
   {
     name: "Studentsheskoje",
@@ -475,7 +482,8 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "talvi",
     ripenOrder: 88,
-    visible: false,
+    visible: true,
+    featured: true,
   },
   {
     name: "Tshistotel",
@@ -501,13 +509,16 @@ export const varieties: Variety[] = [
     fruit: "omena",
     season: "kesä",
     ripenOrder: 28,
-    visible: false,
+    visible: true,
+    featured: true,
   },
 ];
 
 export const visibleVarieties = varieties.filter((v) => v.visible !== false);
 
-export const featuredVarieties = visibleVarieties.filter((v) => v.featured);
+export const featuredVarieties = visibleVarieties
+  .filter((v) => v.featured)
+  .sort((a, b) => a.name.localeCompare(b.name, "fi"));
 
 export const fruitLabels: Record<FruitType, string> = {
   omena: "Omenat",
