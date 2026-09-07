@@ -1,15 +1,36 @@
 import { useSyncExternalStore } from "react";
 
 import { AllVarieties } from "./routes/kaikki";
+import { SensoryTool } from "./routes/havainto";
 import { Index } from "./routes";
 
 function subscribeToHashChange(callback: () => void) {
   window.addEventListener("hashchange", callback);
-  return () => window.removeEventListener("hashchange", callback);
+  window.addEventListener("popstate", callback);
+  return () => {
+    window.removeEventListener("hashchange", callback);
+    window.removeEventListener("popstate", callback);
+  };
 }
 
 function getCurrentRoute() {
-  return window.location.hash.replace(/^#/, "") || window.location.pathname;
+  const hashRoute = window.location.hash.replace(/^#/, "");
+
+  if (hashRoute.startsWith("/")) {
+    return hashRoute;
+  }
+
+  const path = window.location.pathname.replace(/\/+$/, "");
+
+  if (path.endsWith("/kaikki")) {
+    return "/kaikki";
+  }
+
+  if (path.endsWith("/havainto")) {
+    return "/havainto";
+  }
+
+  return "/";
 }
 
 function App() {
@@ -17,6 +38,10 @@ function App() {
 
   if (route === "/kaikki") {
     return <AllVarieties />;
+  }
+
+  if (route === "/havainto") {
+    return <SensoryTool />;
   }
 
   return <Index />;

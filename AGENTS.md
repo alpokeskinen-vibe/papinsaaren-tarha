@@ -29,6 +29,28 @@ Paikallinen sivusto aukeaa oletuksena osoitteeseen:
 http://localhost:8080/
 ```
 
+Havaintotyokalu on piilotettu kenttatyokalu yksittaisten omenahavaintojen
+aistinvaraiseen kuvailuun. Se tallentaa havainnot selaimen localStorageen ja voi
+vieda ne JSON-tiedostona, jossa pienennetyt kuvat kulkevat mukana.
+
+Tyokalu aukeaa esimerkiksi naista osoitteista:
+
+```text
+http://localhost:8080/havainto/
+https://alpokeskinen-vibe.github.io/papinsaaren-tarha/havainto/
+```
+
+Puhelimesta haetut havainnot loytyvat Androidin tiedostonsiirrossa yleensa
+Download-kansiosta nimella `papinsaaren-aistinvaraiset-havainnot-YYYY-MM-DD.json`.
+Kun puhelin on USB:lla kiinni ja tiedostonsiirto on paalla, etsi tiedosto esim:
+
+```bash
+find /run/user/$(id -u)/gvfs /media /mnt -type f -iname 'papinsaaren-aistinvaraiset-havainnot*.json' 2>/dev/null
+```
+
+Kopioi loytynyt JSON tarvittaessa projektin `data/`-hakemistoon. Ala commitoi
+henkilokohtaisia havaintotiedostoja, ellei kayttaja erikseen pyyda sita.
+
 ## Hyodylliset komennot
 
 Rakenna tuotantoversio:

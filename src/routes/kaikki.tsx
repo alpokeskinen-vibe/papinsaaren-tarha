@@ -58,11 +58,11 @@ export function AllVarieties() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border/60">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <a href="./" className="block">
+          <a href="../" className="block">
             <p className="font-display text-xl font-semibold text-primary">Papinsaaren Tarha</p>
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Kuhmoinen</p>
           </a>
-          <a href="./" className="text-sm text-muted-foreground hover:text-primary">
+          <a href="../" className="text-sm text-muted-foreground hover:text-primary">
             ← Etusivulle
           </a>
         </div>

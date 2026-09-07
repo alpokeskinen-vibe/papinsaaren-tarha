@@ -1,13 +1,24 @@
-import { copyFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const distDir = "dist";
 const serverDir = join(distDir, "server");
 const openAiDir = join(distDir, ".openai");
+const staticRouteDirs = ["kaikki", "havainto"];
 
 mkdirSync(serverDir, { recursive: true });
 mkdirSync(openAiDir, { recursive: true });
 copyFileSync(join(".openai", "hosting.json"), join(openAiDir, "hosting.json"));
+
+const indexHtml = readFileSync(join(distDir, "index.html"), "utf8");
+const nestedIndexHtml = indexHtml
+  .replaceAll('src="./assets/', 'src="../assets/')
+  .replaceAll('href="./assets/', 'href="../assets/');
+
+for (const routeDir of staticRouteDirs) {
+  mkdirSync(join(distDir, routeDir), { recursive: true });
+  writeFileSync(join(distDir, routeDir, "index.html"), nestedIndexHtml);
+}
 
 writeFileSync(
   join(serverDir, "index.js"),

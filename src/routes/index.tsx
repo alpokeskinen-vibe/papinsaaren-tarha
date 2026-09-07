@@ -93,12 +93,14 @@ export function Index() {
           </div>
 
           <div className="mt-12 text-center">
-            <a
-              href="#/kaikki"
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 px-6 py-3 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
-            >
-              Selaa kaikkia lajikkeita →
-            </a>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a
+                href="kaikki/"
+                className="inline-flex items-center gap-2 rounded-full border border-primary/30 px-6 py-3 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
+              >
+                Selaa kaikkia lajikkeita →
+              </a>
+            </div>
           </div>
         </div>
       </section>
